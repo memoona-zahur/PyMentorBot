@@ -85,7 +85,7 @@ body {
 }
 
 /* Main Content */
-.main-content {
+/*.main-content {
   width: 80%;
   background-color: #ffffff;
   position: relative;
@@ -262,18 +262,58 @@ body {
   max-width: 80%;
   word-wrap: break-word;
 }
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Full width */
+  padding: 20px;
+}
+/* Chat Output - Full Screen */
+.main-content {
+  width: 80%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+  overflow: hidden; /* Ensures only right-side scrollbar */
+}
+
+/* Chat Messages - Scroll on Right */
+#chat-output {
+  width: 100%;
+  height: 100vh;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* ✅ Align all messages to the left by default */
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: absolute;
+  right: 0;
+}
 
 .user-message {
   background-color: #007bff;
   color: white;
   align-self: flex-end;
+  max-width: 100%;
+  word-wrap: pre-word;
+  word-wrap: break-word
 }
 
 .bot-message {
   background-color: #e5e5e5;
   color: black;
   align-self: flex-start;
+  max-width: 85%;
+  word-wrap: break-word;
+  word-wrap: pre-word
 }
+  /* User message on right side */
+/* User message on right side */
+
 /* BUTTON CHANGES OF INPUT FIELD */
 .input-area {
   display: flex;
@@ -283,8 +323,56 @@ body {
   bottom: 20px;
   width: 100%;
 }
-
+/* UPDATION  */
+.main-content {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  height: 100vh; /* Full viewport height */
+}
+/* Input Area - Centered at the Bottom */
+.input-area {
+  position: absolute;
+  bottom: 0; /* Stick to the bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  max-width: 1000px;
+  padding: 10px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+/* Input Box */
 .input-box {
+  flex: 1;
+  padding: 15px;
+  font-size: 16px;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  outline: none;
+  width: 100px;
+}
+/* Send Button */
+.send-btn {
+  padding: 15px 20px;
+  margin-left: 10px;
+  border: none;
+  background-color: #3498db;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.send-btn:hover {
+  background-color: #2980b9;
+}
+
+/*.input-box {
   width: 60%;
   padding: 15px;
   background-color: #f5f5f5;
@@ -314,38 +402,35 @@ body {
 .send-btn:hover {
   background-color: #ffffff;
 }
-
-/* UPDATION  */
-.main-content {
-  display: flex;
-  justify-content: center; /* Centers horizontally */
-  align-items: center; /* Centers vertically */
-  height: 100vh; /* Full viewport height */
+/* Responsive Design */
+@media (max-width: 768px) {
+  .input-area {
+    width: 90%;
+  }
+  .input-box {
+    font-size: 14px;
+    padding: 12px;
+  }
+  .send-btn {
+    padding: 10px;
+    font-size: 14px;
+  }
 }
-
-.input-area {
-  display: grid;
-  align-items: center;
-  justify-content: left;
-  width: 60%; /* Controls input area width */
+@media (max-width: 480px) {
+  .input-area {
+    width: 95%;
+    flex-direction: column;
+    padding: 10px;
+  }
+  .input-box {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .send-btn {
+    width: 100%;
+    text-align: center;
+  }
 }
-
-.input-box {
-  flex: 1; /* Takes up most of the width */
-  padding: 15px;
-  background-color: #f5f5f5;
-  border: 1px solid #3498db;
-  border-radius: 8px;
-  font-size: 16px;
-  resize: none;
-  height: 50px; /* Adjust as needed */
-}
-
-.input-box:focus {
-  outline: none;
-  border-color: #3498db;
-}
-
 .send-btn {
   padding: 15px 20px;
   border: none;
@@ -357,13 +442,59 @@ body {
   /* margin-left: 10px; Space between textarea and button */
 }
 
-.send-btn:hover {
+/*.send-btn:hover {
   background-color: #2980b9;
+}*/
+
+/* UPDATION  */
+/*.main-content {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  /*align-items: center; /* Centers vertically */
+  /*height: 100vh; /* Full viewport height */
+/*}
+
+.input-area {
+  display: grid;
+  align-items: center;
+  justify-content: left;
+  width: 60%; /* Controls input area width */
+/*}/*
+
+/*.input-box {
+  flex: 1; /* Takes up most of the width */
+  /*padding: 15px;
+  background-color: #f5f5f5;
+  border: 1px solid #3498db;
+  border-radius: 8px;
+  font-size: 16px;
+  resize: none;
+  height: 50px; /* Adjust as needed */
+/*}
+
+.input-box:focus {
+  outline: none;
+  border-color: #3498db;
 }
+
+.send-btn {
+  padding: 15px 20px;
+  border: none;
+  background-color: #ffffff;*/
+  /* color: white; */
+  /*font-size: 16px;
+  /* border-radius: 8px; */
+  /* cursor: pointer; */
+  /* margin-left: 10px; Space between textarea and button */
+/*}
+
+/*.send-btn:hover {
+  background-color: #2980b9;
+}*/
 
 /* CHANGES FOR CODE */
 #output-area {
-  width: 80%;
+  width: 100%;
   margin-top: 20px;
   padding: 15px;
   background-color: #ffffff;
@@ -373,7 +504,6 @@ body {
   white-space: pre-wrap;
   overflow-x: auto;
 }
-
 /* If using Prism.js for syntax highlighting */
 .token.comment {
   color: #75715e;
@@ -389,7 +519,7 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
+/*@media (max-width: 1024px) {
   .sidebar {
     width: 25%;
   }
@@ -457,8 +587,19 @@ body {
     padding: 10px;
     font-size: 14px;
   }
+}*/
+/* Chat Output Scrollbar */
+#chat-output::-webkit-scrollbar {
+  width: 8px;
+}
+#chat-output::-webkit-scrollbar-thumb {
+  background-color: #3498db;
+  border-radius: 10px;
 }
 
+#chat-output::-webkit-scrollbar-track {
+  background-color: #ececec;
+}
 .copy-btn {
   position: absolute;
   top: 10px;
@@ -527,4 +668,18 @@ body {
 
 .explanation p {
   line-height: 1.6;
+}
+
+/* Scrollbar styling */
+.explanation::-webkit-scrollbar {
+  width: 8px;
+}
+
+.explanation::-webkit-scrollbar-thumb {
+  background-color: #3498db;
+  border-radius: 10px;
+}
+
+.explanation::-webkit-scrollbar-track {
+  background-color: #ececec;
 }

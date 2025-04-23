@@ -26,7 +26,19 @@ text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=10
 docs = text_splitter.split_documents(data)
 
 # Embedding model
-embedding_model = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
+#embedding_model = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
+# Updated with new API key
+embedding_model = GoogleGenerativeAIEmbeddings(
+    model="models/embedding-001", 
+    google_api_key="AIzaSyC26Bx9LGbiYFA5l9aj50lvPpJ59G0KWUg"
+)
+
+llm = ChatGoogleGenerativeAI(
+    model="gemini-2.0-flash-exp", 
+    temperature=0.5,
+    google_api_key="AIzaSyC26Bx9LGbiYFA5l9aj50lvPpJ59G0KWUg"
+)
+
 
 # ✅ Check if vector DB exists already
 if not os.path.exists(persist_directory):
@@ -48,7 +60,7 @@ else:
 retriever = vector_store.as_retriever(search_type="similarity", search_kwargs={"k": 5})
 
 # LLM setup
-llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash-exp", temperature=0.5)
+#llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash-exp", temperature=0.5)
 
 # Prompt
 system_prompt = """

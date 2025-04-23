@@ -1,0 +1,199 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("file:///C:/Users/User/Downloads/login/static/DALL%C2%B7E%202025-01-08%2018.46.42%20-%20An%20abstract%20futuristic%20background%20with%20soft%20gradients%20in%20shades%20of%20indigo,%20light%20blue,%20and%20white,%20incorporating%20a%20digital%20network-like%20pattern%20of%20glow.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  /* Login Container */
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+  
+  /* Login Box */
+  .login-box {
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+    background: rgba(218, 251, 251, 0.9); /* Semi-transparent background */
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  /* Sign up Container */
+  .signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+  .signup-box {
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+    background: rgba(218, 251, 251, 0.9); /* Semi-transparent background */
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  
+ /* Logo Section */
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 130px; /* Increased size */
+  height: auto;
+}
+
+  
+  .project-name {
+    font-size: 24px;
+    color: #4b0082;
+    margin-top: 10px;
+    animation: animateText 3s infinite;
+  }
+  
+  /* Login Form */
+  h2 {
+    margin-bottom: 20px;
+    color: #083c75;
+  }
+  
+  .input-group {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #3498db;
+    border-radius: 8px;
+    background: #f5f5f5;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  .input-group label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #777;
+    font-size: 14px;
+    pointer-events: none;
+    transition: 0.3s;
+  }
+  
+  .input-group input:focus ~ label,
+  .input-group input:not(:placeholder-shown) ~ label {
+    top: -10px;
+    font-size: 12px;
+    color: #3498db;
+  }
+  
+  /* Button */
+  .login-button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(45deg, #449cb4, #083c75);
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+  }
+  
+  .login-button:hover {
+    background: linear-gradient(45deg, #083c75, #449cb4);
+    transform: scale(1.05);
+  }
+  /* Button */
+  .signup-button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(45deg, #449cb4, #083c75);
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+  }
+  
+  .signup-button:hover {
+    background: linear-gradient(45deg, #083c75, #449cb4);
+    transform: scale(1.05);
+  }
+  
+  
+  /* Sign Up Prompt */
+  .signup-prompt {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #083c75;
+  }
+  
+  .signup-prompt a {
+    color: #3498db;
+    text-decoration: none;
+  }
+  
+  .signup-prompt a:hover {
+    text-decoration: underline;
+  }
+  /* log in Prompt */
+  .login-prompt {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #083c75;
+  }
+  
+  .login-prompt a {
+    color: #3498db;
+    text-decoration: none;
+  }
+  
+  .signup-prompt a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Text Animation */
+  @keyframes animateText {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .login-box {
+        padding: 20px;
+    }
+  }

@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI Themed Web Page</title>
+    <title>PyMentorBot Interface</title>
     <link rel="stylesheet" href="stylee.css" />
-    <link
+     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css"
     />
@@ -23,42 +23,23 @@
         <!-- Quiz Section (Hidden by default) -->
         <div id="quiz-section" class="quiz-section">
           <h3>Select Level</h3>
-          <button class="level-btn">Basic Level</button>
-          <button class="level-btn">Intermediate Level</button>
-          <button class="level-btn">Advanced Level</button>
+          <ul><button class="level-btn">Basic Level</button></ul>
+          <ul><button class="level-btn">Intermediate Level</button></ul>
+          <ul><button class="level-btn">Advanced Level</button></ul>
         </div>
 
         <!-- Lessons Section (Hidden by default) -->
         <div id="lesson-section" class="lesson-section">
           <h3>Select Topic</h3>
-          <button class="lesson-item-btn" onclick="getVariableDataTypes()">
-            Variable and Data Types
-          </button>
-          <button class="lesson-item-btn" onclick="Introducing_list()">
-            Introducing Lists
-          </button>
-          <button class="lesson-item-btn" onclick="Working_with_Lists()">
-            Working with Lists
-          </button>
-          <button class="lesson-item-btn" onclick=" if_statements()">
-            if statements
-          </button>
-          <button class="lesson-item-btn" onclick="Dictionaries()">
-            Dictionaries
-          </button>
-          <button
-            class="lesson-item-btn"
-            onclick="User_Input_and_while_loops()"
-          >
-            User Input and while loops
-          </button>
-          <button class="lesson-item-btn" onclick="Function1()">
-            Functions
-          </button>
-          <button class="lesson-item-btn" onclick="Classes()">Classes</button>
-          <button class="lesson-item-btn" onclick="File_and_Exception()">
-            File and Exception
-          </button>
+          <ul><button class="lesson-item-btn" onclick="getVariableDataTypes()">Variable and Data Types</button></ul>
+          <ul><button class="lesson-item-btn" onclick="Introducing_list()">Introducing Lists</button></ul>
+          <ul><button class="lesson-item-btn" onclick="Working_with_Lists()">Working with Lists</button></ul>
+          <ul><button class="lesson-item-btn" onclick=" if_statements()">if statements</button></ul>
+          <ul><button class="lesson-item-btn" onclick="Dictionaries()">Dictionaries</button></ul>
+          <ul><button class="lesson-item-btn" onclick="User_Input_and_while_loops()">User Input and while loops</button></ul>
+          <ul><button class="lesson-item-btn" onclick="Function1()">Functions</button></ul>
+          <ul><button class="lesson-item-btn" onclick="Classes()">Classes</button></ul>
+          <ul><button class="lesson-item-btn" onclick="File_and_Exception()">File and Exception</button></ul>
           <!-- <button class="lesson-item-btn">testing Your code</button>
           <button class="lesson-item-btn">Lesson 11</button> -->
         </div>
@@ -79,9 +60,9 @@
             <textarea
               class="input-box"
               id="user-input"
-              placeholder="Type your message here..."
+              placeholder="Message PyMentorBot..."
             ></textarea>
-            <button class="send-btn" onclick="handleUserInput()">send</button>
+            <button class="send-btn" onclick="handleUserInput()">Send</button>
           </div>
         </div>
       </div>
